@@ -1,0 +1,99 @@
+<button id="showQuoteButton">Get An Idea</button>
+<p id="quoteContainer"></p>
+
+<style>
+  /* Style the button */
+  #showQuoteButton {
+    background-color: #bbee;
+    color: #00000;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.7s;
+  }
+
+  /* Hover effect for the button */
+  #showQuoteButton:hover {
+    background-color: #bbeeee;
+  }
+
+  /* Style the quote container */
+  #quoteContainer {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+</style>
+<script>
+  var quotes = [
+    "Create a collage using old love letters.",
+    "Write a poem inspired by a street sign.",
+    "Sketch your dreams as abstract illustrations.",
+    "Use coffee grounds for textured artwork.",
+    "Paint a mural on your bedroom ceiling.",
+    "Design a surrealistic self-portrait.",
+    "Photograph everyday objects in extreme close-up.",
+    "Draw a cityscape from an ant's perspective.",
+    "Make sculptures from discarded electronics.",
+    "Design an artwork that's also a playable board game.",
+    "Communicate solely in rhymes for an hour.",
+    "Organize a pillow fight with imaginary opponents.",
+    "Pretend to be a detective and solve a 'mystery' at home.",
+    "Wear your clothes inside out for an entire day.",
+    "Hold a debate with yourself on a random topic.",
+    "Talk to your pet as if they're a world leader.",
+    "Pretend to be a tour guide in your own home.",
+    "Write a short story using only one-syllable words.",
+    "Arrange your furniture in a completely new and strange layout.",
+    "Tell a story backwards, starting with the ending.",
+    "Paint pebbles to resemble miniature planets.",
+    "Create a quirky dance routine inspired by a kitchen appliance.",
+    "Compose a haiku about the first item you see when you open a book.",
+    "Write a letter to a fictional character, sharing your advice.",
+    "Sketch an abstract portrait using spilled coffee as your medium.",
+    "Write a short story in the style of a cooking recipe.",
+    "Paint a self-portrait using your non-dominant hand.",
+    "Create a comic strip starring your pet as a superhero.",
+    "Sculpt a miniature cityscape from old computer parts.",
+    "Compose a song about the adventures of a rubber duck.",
+    "Create a mosaic from broken pieces of your favorite mug.",
+    "Write a poem inspired by the view from your bathroom window.",
+    "Build a fort from bedsheets and couch cushions.",
+    "Write a short story in reverse, starting with the last sentence.",
+    "Paint a portrait of your pet as a famous historical figure.",
+    "Build a miniature fairy garden in a corner of your backyard.",
+    "Compose a rap about your morning routine.",
+    "Write a dialogue between two inanimate objects on your desk.",
+    "Arrange a still life using only objects from your junk drawer.",
+    "Design a logo for an imaginary ice cream flavor.",
+    "Draw a map of a fantastical world hidden in your closet.",
+    "Write a one-act play set entirely in an elevator.",
+    "Write a poem about the adventures of a sock lost in the laundry.",
+    "Write a short story from the perspective of a houseplant.",
+    "Construct a tiny treehouse for your action figures.",
+    "Design a maze on paper and challenge a friend to solve it.",
+    "Make a necklace from buttons of various shapes and sizes.",
+    "Write a song about the life of a paperclip.",
+    "Craft a miniature forest scene inside a shoebox.",
+    "Draw a self-portrait using your toes as brushes.",
+    "Write a poem that captures the essence of your favorite smell.",
+    "Write a short story where your pet becomes a detective.",
+    "Design a flag for your imaginary country and explain its symbolism.",
+    "Draw a map of a secret underground society in your backyard.",
+    "Craft a sculpture from found objects in your garage.",
+    "Write a dialogue between two characters who can only speak in rhymes.",
+    "Write a letter to your future self, include predictions about your life."
+  ];
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var quoteContainer = document.getElementById("quoteContainer");
+    var showQuoteButton = document.getElementById("showQuoteButton");
+    showQuoteButton.addEventListener("click", function() {
+      var randomIndex = Math.floor(Math.random() * quotes.length);
+      var randomQuote = quotes[randomIndex];
+      quoteContainer.textContent = randomQuote;
+    });
+  });
+</script>
